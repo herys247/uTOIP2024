@@ -40,6 +40,7 @@
 		<div class="page">
 			<div class="page-main">
 
+				<div id="fscreen">
 				<!--Main Header -->
 				<div class="main-header side-header sticky">
 					<div class="container-fluid main-container">
@@ -62,6 +63,39 @@
 								<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
 									<ul class="nav nav-item header-icons navbar-nav-right ms-auto">
 										<!-- Theme-Layout -->
+										<li class="dropdown d-md-flex notifications">
+											<a class="nav-link icon m-theme" data-bs-toggle="dropdown">
+												<i class="mdi mdi-television-guide"></i>
+											</a>
+											<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+												<div id="grid-container">
+													<div><i class="mdi mdi-account-circle-outline icon-group"></i>Admin</div>
+													<div><i class="mdi mdi-presentation icon-group"></i>Sales</div>
+													<div><i class="mdi mdi-wallet-travel icon-group"></i>Marketing</div>
+													<div><i class="mdi mdi-developer-board icon-group"></i>Finance</div>
+													<div><i class="mdi mdi-infinity icon-group"></i>Infinity</div>
+													<div><i class="mdi mdi-access-point-network icon-group"></i>FMC</div>
+													<div><i class="mdi mdi-chart-histogram icon-group"></i>PnT</div>
+													<div><i class="mdi mdi-chart-gantt icon-group"></i>VOC</div>
+													<div><i class="mdi mdi-chart-line-stacked icon-group"></i>PPMB Tools</div>
+													<div><i class="mdi mdi-hexagon-multiple icon-group"></i>AUDRIS</div>
+													<div><i class="mdi mdi-chart-line icon-group"></i>PPMB</div>
+													<div><i class="mdi mdi-server-network icon-group"></i>Network</div>
+													<div><i class="mdi mdi-chart-donut-variant icon-group"></i>HCM</div>
+													<div><i class="mdi mdi-responsive icon-group"></i>IT</div>
+													<div><i class="mdi mdi-crosshairs-gps icon-group"></i>SSD</div>
+													<div><i class="mdi mdi-chart-bubble icon-group"></i>CTP</div>
+													<div><i class="mdi mdi-menu icon-group"></i>All Menu</div>
+												</div>
+											</div>
+										</li>
+
+										<li class="dropdown d-md-flex notifications">
+											<a onclick="var el = document.getElementById('fscreen'); el.requestFullscreen();" class="nav-link icon m-theme" data-bs-toggle="dropdown">
+												<i class="mdi mdi-arrow-expand"></i>
+											</a>
+										</li>
+
 										<li class="dropdown  d-flex">
 											<a class="nav-link icon m-theme theme-layout nav-link-bg layout-setting" href="javascript:void(0);">
 												<span class="dark-layout"><i class="mdi mdi-weather-night"></i></span>
@@ -145,7 +179,7 @@
 				<!--Main Header -->
 
 				<!-- Sidemenu -->
-				<div class="sticky">
+				<div class="sticky" id="fscreen1">
 					<aside class="app-sidebar ps horizontal-main" style="height: 100%;">
 						<div class="app-sidebar__header">
 							<a class="main-logo" href="index.html">
@@ -326,6 +360,8 @@
 					</aside>
 				</div>
 				<!-- End Sidemenu -->
+				</div>
+
 
                 <!--app-content open-->
 				<div class="main-content side-content pt-0">
@@ -349,7 +385,7 @@
 								</div>
 								<div class="ms-auto">
 									<div>
-										<a href="#" class="btn btn-primary button-icon me-3 mt-1 mb-1">
+										<a href="#" onclick="var el = document.getElementById('fscreen'); el.requestFullscreen();" class="btn btn-primary button-icon me-3 mt-1 mb-1">
 											<span><i class="fa fa-pencil-square-o"></i>More Dashboard</span>
 										</a>
 									</div>
