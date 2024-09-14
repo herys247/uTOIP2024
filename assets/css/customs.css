@@ -52,13 +52,27 @@
     color: #000000 !important;
 }
 
+:-webkit-full-screen .fscreen {
+    display: none;
+  }
+
+:-webkit-full-screen .sidebar-mini.sidenav-toggled .main-content.side-content {
+    margin-inline-start: 0 !important;
+}
+
   @media all and (display-mode: fullscreen) {
     .sidebar-mini.sidenav-toggled .main-content.side-content {
         margin-inline-start: 0 !important;
     }
     .fscreen {
-        display: none;
+        display: none !important;
+        visibility: hidden;
     }
+  }
+
+  body:-webkit-full-screen .fscreen {
+    display: none;
+    visibility: hidden !important;
   }
 
 #grid-container {
