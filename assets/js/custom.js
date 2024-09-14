@@ -162,6 +162,22 @@
 
 })(jQuery);
 
+$(document).on('click', '[data-toggle="fullscreen"]', function () {
+    $(this).toggleClass('fscreen');
+
+    if (document.fullscreenEnabled) {
+      if ($(this).hasClass("fscreen")) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    } else {
+      alert("Your browser does not support fullscreen.");
+    }
+
+    return false;
+  });
+
 
 // ______________ SWITCHER-toggle ______________//
 $('.layout-setting').on("click", function (e) {
@@ -225,4 +241,6 @@ $('.layout-setting').on("click", function (e) {
 		//names();
 	}
 });
+
+
 

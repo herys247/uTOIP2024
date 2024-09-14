@@ -52,20 +52,14 @@
     color: #000000 !important;
 }
 
-#fscreen {
-    visibility: visible;
-  }
-
-#fscreen:fullscreen {
-    display: none;
-  }
-
   @media all and (display-mode: fullscreen) {
     .sidebar-mini.sidenav-toggled .main-content.side-content {
         margin-inline-start: 0 !important;
     }
+    .fscreen {
+        display: none;
+    }
   }
-
 
 #grid-container {
     display: grid;
