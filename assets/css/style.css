@@ -8845,13 +8845,25 @@ input[type=month] {
     }
 }
 
+.notif-menu {
+    position: absolute;
+    top: -2px !important;
+    right: -6px !important;
+    display: block !important;
+    padding: 3px 6px !important;
+    font-size: 10px !important;
+    border-radius: 50px !important;
+    line-height: 1.1;
+    z-index: 0;
+}
+
 .nav-unread {
     position: absolute;
     inset-block-start: 0.4rem;
     background: #ecd938;
     width: 0.5rem;
     height: 0.5rem;
-    border-radius: 50%;
+    border-radius: 50%; 
 }
 
 .nav-unread.badge {
