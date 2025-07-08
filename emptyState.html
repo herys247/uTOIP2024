@@ -36,23 +36,36 @@
 			background-image: url("assets/icon/background.png");
 			background-size: contain;
 			background-position-x: 100%;
+			background-position-y: 90px;
 			background-repeat: no-repeat;
 			background-color: #fff;
-
-
 		}
 
 
+		.sidebarCustom::-webkit-scrollbar {
+			width: 0;
+		}
+
 		.sidebarCustom {
 			overflow: hidden;
-			width: 393px;
-			min-height: 93vh;
+			min-width: 25.28%;
+			max-width: 393px;
+			overflow: auto;
+			max-height: 93vh;
 			border-radius: 0px 0px 120px 0px;
 			background: linear-gradient(189deg, #0F1D32 9.44%, #1A3253 56.98%, #0368AF 98.69%);
 			background: url('assets/icon/leftBar.png') no-repeat center/cover;
 			position: sticky;
 			top: 0;
 			padding-top: 82px;
+		}
+
+
+		@media (max-width: 1400px) {
+			.sidebarCustom .col-xl-4 {
+				flex: 0 0 50% !important;
+				max-width: 50% !important;
+			}
 		}
 
 
@@ -299,10 +312,98 @@
 
 			<div class="d-flex gap-5">
 				<!-- Sidebar Container -->
-				<div class="sidebarCustom d-flex flex-column align-items-center  px-5">
+				<div class="sidebarCustom d-flex flex-column align-items-center px-5">
 					<div class="row g-5 justify-content-start row-gap-5">
 						<!-- Admin Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
+							<div class="icon-wrapper">
+								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16 0.5C13.8989 0.5 11.8183 0.913852 9.87706 1.71793C7.93586 2.522 6.17203 3.70055 4.68629 5.18629C1.68571 8.18687 0 12.2565 0 16.5C0 20.7435 1.68571 24.8131 4.68629 27.8137C6.17203 29.2994 7.93586 30.478 9.87706 31.2821C11.8183 32.0861 13.8989 32.5 16 32.5C20.2435 32.5 24.3131 30.8143 27.3137 27.8137C30.3143 24.8131 32 20.7435 32 16.5C32 14.3989 31.5861 12.3183 30.7821 10.3771C29.978 8.43586 28.7994 6.67203 27.3137 5.18629C25.828 3.70055 24.0641 2.522 22.1229 1.71793C20.1817 0.913852 18.1012 0.5 16 0.5ZM8.112 26.548C8.8 25.108 12.992 23.7 16 23.7C19.008 23.7 23.2 25.108 23.888 26.548C21.712 28.276 18.976 29.3 16 29.3C13.024 29.3 10.288 28.276 8.112 26.548ZM26.176 24.228C23.888 21.444 18.336 20.5 16 20.5C13.664 20.5 8.112 21.444 5.824 24.228C4.192 22.1 3.2 19.412 3.2 16.5C3.2 9.444 8.944 3.7 16 3.7C23.056 3.7 28.8 9.444 28.8 16.5C28.8 19.412 27.808 22.1 26.176 24.228ZM16 6.9C12.896 6.9 10.4 9.396 10.4 12.5C10.4 15.604 12.896 18.1 16 18.1C19.104 18.1 21.6 15.604 21.6 12.5C21.6 9.396 19.104 6.9 16 6.9ZM16 14.9C15.3635 14.9 14.753 14.6471 14.3029 14.1971C13.8529 13.747 13.6 13.1365 13.6 12.5C13.6 11.8635 13.8529 11.253 14.3029 10.8029C14.753 10.3529 15.3635 10.1 16 10.1C16.6365 10.1 17.247 10.3529 17.6971 10.8029C18.1471 11.253 18.4 11.8635 18.4 12.5C18.4 13.1365 18.1471 13.747 17.6971 14.1971C17.247 14.6471 16.6365 14.9 16 14.9Z"
+										fill="white" />
+								</svg>
+							</div>
+							<small class="mt-2 text-center">Admin</small>
+						</div>
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
+							<div class="icon-wrapper">
+								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16 0.5C13.8989 0.5 11.8183 0.913852 9.87706 1.71793C7.93586 2.522 6.17203 3.70055 4.68629 5.18629C1.68571 8.18687 0 12.2565 0 16.5C0 20.7435 1.68571 24.8131 4.68629 27.8137C6.17203 29.2994 7.93586 30.478 9.87706 31.2821C11.8183 32.0861 13.8989 32.5 16 32.5C20.2435 32.5 24.3131 30.8143 27.3137 27.8137C30.3143 24.8131 32 20.7435 32 16.5C32 14.3989 31.5861 12.3183 30.7821 10.3771C29.978 8.43586 28.7994 6.67203 27.3137 5.18629C25.828 3.70055 24.0641 2.522 22.1229 1.71793C20.1817 0.913852 18.1012 0.5 16 0.5ZM8.112 26.548C8.8 25.108 12.992 23.7 16 23.7C19.008 23.7 23.2 25.108 23.888 26.548C21.712 28.276 18.976 29.3 16 29.3C13.024 29.3 10.288 28.276 8.112 26.548ZM26.176 24.228C23.888 21.444 18.336 20.5 16 20.5C13.664 20.5 8.112 21.444 5.824 24.228C4.192 22.1 3.2 19.412 3.2 16.5C3.2 9.444 8.944 3.7 16 3.7C23.056 3.7 28.8 9.444 28.8 16.5C28.8 19.412 27.808 22.1 26.176 24.228ZM16 6.9C12.896 6.9 10.4 9.396 10.4 12.5C10.4 15.604 12.896 18.1 16 18.1C19.104 18.1 21.6 15.604 21.6 12.5C21.6 9.396 19.104 6.9 16 6.9ZM16 14.9C15.3635 14.9 14.753 14.6471 14.3029 14.1971C13.8529 13.747 13.6 13.1365 13.6 12.5C13.6 11.8635 13.8529 11.253 14.3029 10.8029C14.753 10.3529 15.3635 10.1 16 10.1C16.6365 10.1 17.247 10.3529 17.6971 10.8029C18.1471 11.253 18.4 11.8635 18.4 12.5C18.4 13.1365 18.1471 13.747 17.6971 14.1971C17.247 14.6471 16.6365 14.9 16 14.9Z"
+										fill="white" />
+								</svg>
+							</div>
+							<small class="mt-2 text-center">Admin</small>
+						</div>
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
+							<div class="icon-wrapper">
+								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16 0.5C13.8989 0.5 11.8183 0.913852 9.87706 1.71793C7.93586 2.522 6.17203 3.70055 4.68629 5.18629C1.68571 8.18687 0 12.2565 0 16.5C0 20.7435 1.68571 24.8131 4.68629 27.8137C6.17203 29.2994 7.93586 30.478 9.87706 31.2821C11.8183 32.0861 13.8989 32.5 16 32.5C20.2435 32.5 24.3131 30.8143 27.3137 27.8137C30.3143 24.8131 32 20.7435 32 16.5C32 14.3989 31.5861 12.3183 30.7821 10.3771C29.978 8.43586 28.7994 6.67203 27.3137 5.18629C25.828 3.70055 24.0641 2.522 22.1229 1.71793C20.1817 0.913852 18.1012 0.5 16 0.5ZM8.112 26.548C8.8 25.108 12.992 23.7 16 23.7C19.008 23.7 23.2 25.108 23.888 26.548C21.712 28.276 18.976 29.3 16 29.3C13.024 29.3 10.288 28.276 8.112 26.548ZM26.176 24.228C23.888 21.444 18.336 20.5 16 20.5C13.664 20.5 8.112 21.444 5.824 24.228C4.192 22.1 3.2 19.412 3.2 16.5C3.2 9.444 8.944 3.7 16 3.7C23.056 3.7 28.8 9.444 28.8 16.5C28.8 19.412 27.808 22.1 26.176 24.228ZM16 6.9C12.896 6.9 10.4 9.396 10.4 12.5C10.4 15.604 12.896 18.1 16 18.1C19.104 18.1 21.6 15.604 21.6 12.5C21.6 9.396 19.104 6.9 16 6.9ZM16 14.9C15.3635 14.9 14.753 14.6471 14.3029 14.1971C13.8529 13.747 13.6 13.1365 13.6 12.5C13.6 11.8635 13.8529 11.253 14.3029 10.8029C14.753 10.3529 15.3635 10.1 16 10.1C16.6365 10.1 17.247 10.3529 17.6971 10.8029C18.1471 11.253 18.4 11.8635 18.4 12.5C18.4 13.1365 18.1471 13.747 17.6971 14.1971C17.247 14.6471 16.6365 14.9 16 14.9Z"
+										fill="white" />
+								</svg>
+							</div>
+							<small class="mt-2 text-center">Admin</small>
+						</div>
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
+							<div class="icon-wrapper">
+								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16 0.5C13.8989 0.5 11.8183 0.913852 9.87706 1.71793C7.93586 2.522 6.17203 3.70055 4.68629 5.18629C1.68571 8.18687 0 12.2565 0 16.5C0 20.7435 1.68571 24.8131 4.68629 27.8137C6.17203 29.2994 7.93586 30.478 9.87706 31.2821C11.8183 32.0861 13.8989 32.5 16 32.5C20.2435 32.5 24.3131 30.8143 27.3137 27.8137C30.3143 24.8131 32 20.7435 32 16.5C32 14.3989 31.5861 12.3183 30.7821 10.3771C29.978 8.43586 28.7994 6.67203 27.3137 5.18629C25.828 3.70055 24.0641 2.522 22.1229 1.71793C20.1817 0.913852 18.1012 0.5 16 0.5ZM8.112 26.548C8.8 25.108 12.992 23.7 16 23.7C19.008 23.7 23.2 25.108 23.888 26.548C21.712 28.276 18.976 29.3 16 29.3C13.024 29.3 10.288 28.276 8.112 26.548ZM26.176 24.228C23.888 21.444 18.336 20.5 16 20.5C13.664 20.5 8.112 21.444 5.824 24.228C4.192 22.1 3.2 19.412 3.2 16.5C3.2 9.444 8.944 3.7 16 3.7C23.056 3.7 28.8 9.444 28.8 16.5C28.8 19.412 27.808 22.1 26.176 24.228ZM16 6.9C12.896 6.9 10.4 9.396 10.4 12.5C10.4 15.604 12.896 18.1 16 18.1C19.104 18.1 21.6 15.604 21.6 12.5C21.6 9.396 19.104 6.9 16 6.9ZM16 14.9C15.3635 14.9 14.753 14.6471 14.3029 14.1971C13.8529 13.747 13.6 13.1365 13.6 12.5C13.6 11.8635 13.8529 11.253 14.3029 10.8029C14.753 10.3529 15.3635 10.1 16 10.1C16.6365 10.1 17.247 10.3529 17.6971 10.8029C18.1471 11.253 18.4 11.8635 18.4 12.5C18.4 13.1365 18.1471 13.747 17.6971 14.1971C17.247 14.6471 16.6365 14.9 16 14.9Z"
+										fill="white" />
+								</svg>
+							</div>
+							<small class="mt-2 text-center">Admin</small>
+						</div>
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
+							<div class="icon-wrapper">
+								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16 0.5C13.8989 0.5 11.8183 0.913852 9.87706 1.71793C7.93586 2.522 6.17203 3.70055 4.68629 5.18629C1.68571 8.18687 0 12.2565 0 16.5C0 20.7435 1.68571 24.8131 4.68629 27.8137C6.17203 29.2994 7.93586 30.478 9.87706 31.2821C11.8183 32.0861 13.8989 32.5 16 32.5C20.2435 32.5 24.3131 30.8143 27.3137 27.8137C30.3143 24.8131 32 20.7435 32 16.5C32 14.3989 31.5861 12.3183 30.7821 10.3771C29.978 8.43586 28.7994 6.67203 27.3137 5.18629C25.828 3.70055 24.0641 2.522 22.1229 1.71793C20.1817 0.913852 18.1012 0.5 16 0.5ZM8.112 26.548C8.8 25.108 12.992 23.7 16 23.7C19.008 23.7 23.2 25.108 23.888 26.548C21.712 28.276 18.976 29.3 16 29.3C13.024 29.3 10.288 28.276 8.112 26.548ZM26.176 24.228C23.888 21.444 18.336 20.5 16 20.5C13.664 20.5 8.112 21.444 5.824 24.228C4.192 22.1 3.2 19.412 3.2 16.5C3.2 9.444 8.944 3.7 16 3.7C23.056 3.7 28.8 9.444 28.8 16.5C28.8 19.412 27.808 22.1 26.176 24.228ZM16 6.9C12.896 6.9 10.4 9.396 10.4 12.5C10.4 15.604 12.896 18.1 16 18.1C19.104 18.1 21.6 15.604 21.6 12.5C21.6 9.396 19.104 6.9 16 6.9ZM16 14.9C15.3635 14.9 14.753 14.6471 14.3029 14.1971C13.8529 13.747 13.6 13.1365 13.6 12.5C13.6 11.8635 13.8529 11.253 14.3029 10.8029C14.753 10.3529 15.3635 10.1 16 10.1C16.6365 10.1 17.247 10.3529 17.6971 10.8029C18.1471 11.253 18.4 11.8635 18.4 12.5C18.4 13.1365 18.1471 13.747 17.6971 14.1971C17.247 14.6471 16.6365 14.9 16 14.9Z"
+										fill="white" />
+								</svg>
+							</div>
+							<small class="mt-2 text-center">Admin</small>
+						</div>
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
+							<div class="icon-wrapper">
+								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16 0.5C13.8989 0.5 11.8183 0.913852 9.87706 1.71793C7.93586 2.522 6.17203 3.70055 4.68629 5.18629C1.68571 8.18687 0 12.2565 0 16.5C0 20.7435 1.68571 24.8131 4.68629 27.8137C6.17203 29.2994 7.93586 30.478 9.87706 31.2821C11.8183 32.0861 13.8989 32.5 16 32.5C20.2435 32.5 24.3131 30.8143 27.3137 27.8137C30.3143 24.8131 32 20.7435 32 16.5C32 14.3989 31.5861 12.3183 30.7821 10.3771C29.978 8.43586 28.7994 6.67203 27.3137 5.18629C25.828 3.70055 24.0641 2.522 22.1229 1.71793C20.1817 0.913852 18.1012 0.5 16 0.5ZM8.112 26.548C8.8 25.108 12.992 23.7 16 23.7C19.008 23.7 23.2 25.108 23.888 26.548C21.712 28.276 18.976 29.3 16 29.3C13.024 29.3 10.288 28.276 8.112 26.548ZM26.176 24.228C23.888 21.444 18.336 20.5 16 20.5C13.664 20.5 8.112 21.444 5.824 24.228C4.192 22.1 3.2 19.412 3.2 16.5C3.2 9.444 8.944 3.7 16 3.7C23.056 3.7 28.8 9.444 28.8 16.5C28.8 19.412 27.808 22.1 26.176 24.228ZM16 6.9C12.896 6.9 10.4 9.396 10.4 12.5C10.4 15.604 12.896 18.1 16 18.1C19.104 18.1 21.6 15.604 21.6 12.5C21.6 9.396 19.104 6.9 16 6.9ZM16 14.9C15.3635 14.9 14.753 14.6471 14.3029 14.1971C13.8529 13.747 13.6 13.1365 13.6 12.5C13.6 11.8635 13.8529 11.253 14.3029 10.8029C14.753 10.3529 15.3635 10.1 16 10.1C16.6365 10.1 17.247 10.3529 17.6971 10.8029C18.1471 11.253 18.4 11.8635 18.4 12.5C18.4 13.1365 18.1471 13.747 17.6971 14.1971C17.247 14.6471 16.6365 14.9 16 14.9Z"
+										fill="white" />
+								</svg>
+							</div>
+							<small class="mt-2 text-center">Admin</small>
+						</div>
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
+							<div class="icon-wrapper">
+								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16 0.5C13.8989 0.5 11.8183 0.913852 9.87706 1.71793C7.93586 2.522 6.17203 3.70055 4.68629 5.18629C1.68571 8.18687 0 12.2565 0 16.5C0 20.7435 1.68571 24.8131 4.68629 27.8137C6.17203 29.2994 7.93586 30.478 9.87706 31.2821C11.8183 32.0861 13.8989 32.5 16 32.5C20.2435 32.5 24.3131 30.8143 27.3137 27.8137C30.3143 24.8131 32 20.7435 32 16.5C32 14.3989 31.5861 12.3183 30.7821 10.3771C29.978 8.43586 28.7994 6.67203 27.3137 5.18629C25.828 3.70055 24.0641 2.522 22.1229 1.71793C20.1817 0.913852 18.1012 0.5 16 0.5ZM8.112 26.548C8.8 25.108 12.992 23.7 16 23.7C19.008 23.7 23.2 25.108 23.888 26.548C21.712 28.276 18.976 29.3 16 29.3C13.024 29.3 10.288 28.276 8.112 26.548ZM26.176 24.228C23.888 21.444 18.336 20.5 16 20.5C13.664 20.5 8.112 21.444 5.824 24.228C4.192 22.1 3.2 19.412 3.2 16.5C3.2 9.444 8.944 3.7 16 3.7C23.056 3.7 28.8 9.444 28.8 16.5C28.8 19.412 27.808 22.1 26.176 24.228ZM16 6.9C12.896 6.9 10.4 9.396 10.4 12.5C10.4 15.604 12.896 18.1 16 18.1C19.104 18.1 21.6 15.604 21.6 12.5C21.6 9.396 19.104 6.9 16 6.9ZM16 14.9C15.3635 14.9 14.753 14.6471 14.3029 14.1971C13.8529 13.747 13.6 13.1365 13.6 12.5C13.6 11.8635 13.8529 11.253 14.3029 10.8029C14.753 10.3529 15.3635 10.1 16 10.1C16.6365 10.1 17.247 10.3529 17.6971 10.8029C18.1471 11.253 18.4 11.8635 18.4 12.5C18.4 13.1365 18.1471 13.747 17.6971 14.1971C17.247 14.6471 16.6365 14.9 16 14.9Z"
+										fill="white" />
+								</svg>
+							</div>
+							<small class="mt-2 text-center">Admin</small>
+						</div>
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
+							<div class="icon-wrapper">
+								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M16 0.5C13.8989 0.5 11.8183 0.913852 9.87706 1.71793C7.93586 2.522 6.17203 3.70055 4.68629 5.18629C1.68571 8.18687 0 12.2565 0 16.5C0 20.7435 1.68571 24.8131 4.68629 27.8137C6.17203 29.2994 7.93586 30.478 9.87706 31.2821C11.8183 32.0861 13.8989 32.5 16 32.5C20.2435 32.5 24.3131 30.8143 27.3137 27.8137C30.3143 24.8131 32 20.7435 32 16.5C32 14.3989 31.5861 12.3183 30.7821 10.3771C29.978 8.43586 28.7994 6.67203 27.3137 5.18629C25.828 3.70055 24.0641 2.522 22.1229 1.71793C20.1817 0.913852 18.1012 0.5 16 0.5ZM8.112 26.548C8.8 25.108 12.992 23.7 16 23.7C19.008 23.7 23.2 25.108 23.888 26.548C21.712 28.276 18.976 29.3 16 29.3C13.024 29.3 10.288 28.276 8.112 26.548ZM26.176 24.228C23.888 21.444 18.336 20.5 16 20.5C13.664 20.5 8.112 21.444 5.824 24.228C4.192 22.1 3.2 19.412 3.2 16.5C3.2 9.444 8.944 3.7 16 3.7C23.056 3.7 28.8 9.444 28.8 16.5C28.8 19.412 27.808 22.1 26.176 24.228ZM16 6.9C12.896 6.9 10.4 9.396 10.4 12.5C10.4 15.604 12.896 18.1 16 18.1C19.104 18.1 21.6 15.604 21.6 12.5C21.6 9.396 19.104 6.9 16 6.9ZM16 14.9C15.3635 14.9 14.753 14.6471 14.3029 14.1971C13.8529 13.747 13.6 13.1365 13.6 12.5C13.6 11.8635 13.8529 11.253 14.3029 10.8029C14.753 10.3529 15.3635 10.1 16 10.1C16.6365 10.1 17.247 10.3529 17.6971 10.8029C18.1471 11.253 18.4 11.8635 18.4 12.5C18.4 13.1365 18.1471 13.747 17.6971 14.1971C17.247 14.6471 16.6365 14.9 16 14.9Z"
+										fill="white" />
+								</svg>
+							</div>
+							<small class="mt-2 text-center">Admin</small>
+						</div>
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -316,7 +417,7 @@
 
 						<!-- PnT Btn -->
 
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -337,7 +438,7 @@
 						</div>
 						<!-- HCM Btn -->
 
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -352,7 +453,7 @@
 						<!-- Sales Btn -->
 
 						<div
-							class="col-4 d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
+							class="col-6 col-xl-4  d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
 							<div class="icon-wrapper">
 								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -365,7 +466,7 @@
 							<small class="mt-2 text-center">Sales</small>
 						</div>
 						<!-- VOC Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="40" height="41" viewBox="0 0 40 41" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -391,7 +492,7 @@
 
 						<!-- IT Btn -->
 
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -405,7 +506,7 @@
 						</div>
 						<!-- Marketing Btn -->
 						<div
-							class="col-4 d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
+							class="col-6 col-xl-4  d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
 							<div class="icon-wrapper">
 								<svg width="33" height="31" viewBox="0 0 33 31" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -419,7 +520,7 @@
 						</div>
 
 						<!-- PMBB Tools Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="33" height="29" viewBox="0 0 33 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -445,7 +546,7 @@
 
 						<!-- SSD Btn -->
 						<div
-							class="col-4 d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
+							class="col-6 col-xl-4  d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
 							<div class="icon-wrapper">
 								<svg width="38" height="38" viewBox="0 0 38 38" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -460,7 +561,7 @@
 
 						<!-- Finance Btn -->
 						<div
-							class="col-4 d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
+							class="col-6 col-xl-4  d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
 							<div class="icon-wrapper">
 								<svg width="41" height="45" viewBox="0 0 41 45" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -476,7 +577,7 @@
 
 						<!-- AUDRIS Btn -->
 						<div
-							class="col-4 d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
+							class="col-6 col-xl-4  d-flex flex-column align-items-center text-white opacity-25 cursor-not-allowed">
 							<div class="icon-wrapper">
 								<svg width="36" height="32" viewBox="0 0 36 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -502,7 +603,7 @@
 						</div>
 
 						<!-- CTP Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="38" height="39" viewBox="0 0 38 39" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -517,7 +618,7 @@
 						</div>
 
 						<!-- Infinity Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="44" height="21" viewBox="0 0 44 21" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -533,7 +634,7 @@
 						</div>
 
 						<!-- PPMB Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="31" height="32" viewBox="0 0 31 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -561,7 +662,7 @@
 						</div>
 
 						<!-- All Menu Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -577,7 +678,7 @@
 						</div>
 
 						<!-- FMC Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="36" height="36" viewBox="0 0 36 36" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -593,7 +694,7 @@
 						</div>
 
 						<!-- Network Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4  d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="33" height="32" viewBox="0 0 33 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">

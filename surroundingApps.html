@@ -29,71 +29,97 @@
 
 </head>
 
+
+<style>
+	body {
+		background-image: url("assets/icon/background.png");
+		background-size: contain;
+		background-position-x: 100%;
+		background-position-y: 90px;
+		background-repeat: no-repeat;
+		background-color: #fff;
+	}
+
+
+	.sidebarCustom {
+		overflow: hidden;
+		min-width: 25.28%;
+		max-width: 393px;
+
+		min-height: 93vh;
+		border-radius: 0px 0px 120px 0px;
+		background: linear-gradient(189deg, #0F1D32 9.44%, #1A3253 56.98%, #0368AF 98.69%);
+		background: url('assets/icon/leftBar.png') no-repeat center/cover;
+		position: sticky;
+		top: 0;
+		padding-top: 82px;
+	}
+
+
+	@media (max-width: 1400px) {
+		.sidebarCustom .col-xl-4 {
+			flex: 0 0 50% !important;
+			max-width: 50% !important;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		.contentCard {
+			width: 72vw !important;
+
+			/* min-width: 100% !important;
+		max-width: 1250px !important; */
+		}
+	}
+
+
+	.contentCard {
+		width: 100%;
+		/* min-width: 100% !important;
+		max-width: 1250px !important; */
+	}
+
+
+
+	.sidebarCustom small {
+		color: #fff;
+	}
+
+	.icon-wrapper {
+		width: 80px;
+		height: 75px;
+		background: #586879;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 12px;
+	}
+
+	.icon-wrapper:hover {
+		background-color: #fff;
+	}
+
+	.icon-wrapper:hover svg path {
+		fill: #24285B;
+	}
+
+	.icon-wrapper svg path {
+		transition: fill 0.3s ease;
+	}
+
+
+	/* Active Style */
+	.icon-wrapper.active {
+		background-color: #fff;
+	}
+
+	.icon-wrapper.active svg path {
+		fill: #24285B;
+	}
+</style>
+
 <body class="app sidebar-mini Left-menu-Default  Sidemenu-left-icons sidenav-toggled">
-
-	<style>
-		body {
-			background-image: url("assets/icon/background.png");
-			background-size: contain;
-			background-position-x: 100%;
-			background-repeat: no-repeat;
-			background-color: #fff;
-
-
-		}
-
-
-		.sidebarCustom {
-			overflow: hidden;
-			width: 393px;
-			min-height: 93vh;
-			border-radius: 0px 0px 120px 0px;
-			background: linear-gradient(189deg, #0F1D32 9.44%, #1A3253 56.98%, #0368AF 98.69%);
-			background: url('assets/icon/leftBar.png') no-repeat center/cover;
-			position: sticky;
-			top: 0;
-			padding-top: 82px;
-		}
-
-
-
-		.sidebarCustom small {
-			color: #fff;
-		}
-
-		.icon-wrapper {
-			width: 80px;
-			height: 75px;
-			background: #586879;
-			border-radius: 16px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-top: 12px;
-		}
-
-		.icon-wrapper:hover {
-			background-color: #fff;
-		}
-
-		.icon-wrapper:hover svg path {
-			fill: #24285B;
-		}
-
-		.icon-wrapper svg path {
-			transition: fill 0.3s ease;
-		}
-
-
-		/* Active Style */
-		.icon-wrapper.active {
-			background-color: #fff;
-		}
-
-		.icon-wrapper.active svg path {
-			fill: #24285B;
-		}
-	</style>
 
 	<!-- GLOBAL-LOADER -->
 	<!-- <div id="global-loader">
@@ -282,12 +308,12 @@
 
 			<!-- PAGE-HEADER -->
 
-			<div class="d-flex gap-5">
+			<div class="d-flex gap-4">
 				<!-- Sidebar Container -->
 				<div class="sidebarCustom d-flex flex-column align-items-center  px-5">
 					<div class="row g-5 justify-content-start row-gap-5">
 						<!-- Admin Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -301,7 +327,7 @@
 
 						<!-- PnT Btn -->
 
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -322,7 +348,7 @@
 						</div>
 						<!-- HCM Btn -->
 
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -336,7 +362,7 @@
 						</div>
 						<!-- Sales Btn -->
 
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="33" viewBox="0 0 32 33" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -349,7 +375,7 @@
 							<small class="mt-2 text-center">Sales</small>
 						</div>
 						<!-- VOC Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="40" height="41" viewBox="0 0 40 41" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -375,7 +401,7 @@
 
 						<!-- IT Btn -->
 
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -388,7 +414,7 @@
 							<small class="mt-2 text-center">IT</small>
 						</div>
 						<!-- Marketing Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="33" height="31" viewBox="0 0 33 31" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -402,7 +428,7 @@
 						</div>
 
 						<!-- PMBB Tools Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="33" height="29" viewBox="0 0 33 29" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -427,7 +453,7 @@
 						</div>
 
 						<!-- SSD Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="38" height="38" viewBox="0 0 38 38" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -441,7 +467,7 @@
 						</div>
 
 						<!-- Finance Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="41" height="45" viewBox="0 0 41 45" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -456,7 +482,7 @@
 						</div>
 
 						<!-- AUDRIS Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="36" height="32" viewBox="0 0 36 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -482,7 +508,7 @@
 						</div>
 
 						<!-- CTP Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="38" height="39" viewBox="0 0 38 39" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -497,7 +523,7 @@
 						</div>
 
 						<!-- Infinity Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="44" height="21" viewBox="0 0 44 21" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -513,7 +539,7 @@
 						</div>
 
 						<!-- PPMB Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="31" height="32" viewBox="0 0 31 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -541,7 +567,7 @@
 						</div>
 
 						<!-- All Menu Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="40" height="40" viewBox="0 0 40 40" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -557,7 +583,7 @@
 						</div>
 
 						<!-- FMC Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="36" height="36" viewBox="0 0 36 36" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -573,7 +599,7 @@
 						</div>
 
 						<!-- Network Btn -->
-						<div class="col-4 d-flex flex-column align-items-center text-white">
+						<div class="col-6 col-xl-4 d-flex flex-column align-items-center text-white">
 							<div class="icon-wrapper">
 								<svg width="33" height="32" viewBox="0 0 33 32" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -617,18 +643,18 @@
 				<div class="mt-5">
 					<!-- CONTENT-->
 					<!-- content Topline Revenue-->
-					<div class="row card p-4 mt-5 rounded-3" style="width: 1250px;">
+					<div class="row card p-4 mt-5 rounded-3 contentCard">
 						<!-- title page -->
 						<div class="">
 							<h4 class="mb-2 fw-bold fs-5">Topline Revenue</h4>
 						</div>
 
-						<div class="row ms-1 gap-0">
+						<div class="row ms-1 gap-0 contentApps">
 							<!-- content row 1 -->
-							<div class="row justify-content-between">
+							<div class="row justify-content-between gap-4">
 								<!-- card 1 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -643,13 +669,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Topline Revenue</h6>
+										<h6 class="mb-0 fw-medium textApps">Topline Revenue</h6>
 									</div>
 
 								</div>
 								<!-- card 2 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -664,13 +690,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">L1 Service</h6>
+										<h6 class="mb-0 fw-medium textApps">L1 Service</h6>
 									</div>
 
 								</div>
 								<!-- card 3 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -685,13 +711,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Broadband Pack</h6>
+										<h6 class="mb-0 fw-medium textApps">Broadband Pack</h6>
 									</div>
 
 								</div>
 								<!-- card 4 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -706,13 +732,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Driver</h6>
+										<h6 class="mb-0 fw-medium textApps">Driver</h6>
 									</div>
 
 								</div>
 								<!-- card 5 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -727,16 +753,16 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Cohort</h6>
+										<h6 class="mb-0 fw-medium textApps">Cohort</h6>
 									</div>
 
 								</div>
 							</div>
 							<!-- content row 2 -->
-							<div class="row justify-content-between">
+							<div class="row justify-content-between gap-4">
 								<!-- card 1 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -751,13 +777,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">myTsel & Poin</h6>
+										<h6 class="mb-0 fw-medium textApps">myTsel & Poin</h6>
 									</div>
 
 								</div>
 								<!-- card 2 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -772,13 +798,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Postpaid</h6>
+										<h6 class="mb-0 fw-medium textApps">Postpaid</h6>
 									</div>
 
 								</div>
 								<!-- card 3 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -793,13 +819,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Fundamental</h6>
+										<h6 class="mb-0 fw-medium textApps">Fundamental</h6>
 									</div>
 
 								</div>
 								<!-- card 4 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -814,13 +840,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Market & Program</h6>
+										<h6 class="mb-0 fw-medium textApps">Market & Program</h6>
 									</div>
 
 								</div>
 								<!-- card 5 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -835,7 +861,7 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Campaign</h6>
+										<h6 class="mb-0 fw-medium textApps">Campaign</h6>
 									</div>
 
 								</div>
@@ -846,18 +872,18 @@
 
 					</div>
 					<!-- content Household-->
-					<div class="row card p-4 mt-3 rounded-3" style="width: 1250px;">
+					<div class="row card p-4 mt-3 rounded-3 contentCard">
 						<!-- title page -->
 						<div class="">
 							<h4 class="mb-2 fw-bold fs-5">Household</h4>
 						</div>
 
-						<div class="row ms-1 gap-0">
+						<div class="row ms-1 gap-0  contentApps">
 							<!-- content row 1 -->
-							<div class="row justify-content-between">
+							<div class="row justify-content-between gap-4">
 								<!-- card 1 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -872,13 +898,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Topline Perf</h6>
+										<h6 class="mb-0 fw-medium textApps">Topline Perf</h6>
 									</div>
 
 								</div>
 								<!-- card 2 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -893,13 +919,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Retention</h6>
+										<h6 class="mb-0 fw-medium textApps">Retention</h6>
 									</div>
 
 								</div>
 								<!-- card 3 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -914,13 +940,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Broadband Pack</h6>
+										<h6 class="mb-0 fw-medium textApps">Broadband Pack</h6>
 									</div>
 
 								</div>
 								<!-- card 4 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -935,13 +961,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Agency</h6>
+										<h6 class="mb-0 fw-medium textApps">Agency</h6>
 									</div>
 
 								</div>
 								<!-- card 5 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -956,16 +982,16 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">NPS</h6>
+										<h6 class="mb-0 fw-medium textApps">NPS</h6>
 									</div>
 
 								</div>
 							</div>
 							<!-- content row 2 -->
-							<div class="row justify-content-start gap-5">
+							<div class="row justify-content-between gap-4">
 								<!-- card 1 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -980,13 +1006,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Collection</h6>
+										<h6 class="mb-0 fw-medium textApps">Collection</h6>
 									</div>
 
 								</div>
 								<!-- card 2 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -1001,13 +1027,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Sales</h6>
+										<h6 class="mb-0 fw-medium textApps">Sales</h6>
 									</div>
 
 								</div>
 								<!-- card 3 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -1022,13 +1048,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">APC</h6>
+										<h6 class="mb-0 fw-medium textApps">APC</h6>
 									</div>
 
 								</div>
 								<!-- card 4 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -1043,10 +1069,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Loyalty</h6>
+										<h6 class="mb-0 fw-medium textApps">Loyalty</h6>
 									</div>
 
 								</div>
+								<!-- make sure if totally no 5 content -->
+								<div class="col-2"></div>
+
 							</div>
 						</div>
 
@@ -1054,18 +1083,18 @@
 
 					</div>
 					<!-- content Network-->
-					<div class="row card p-4 mt-3 rounded-3" style="width: 1250px;">
+					<div class="row card p-4 mt-3 rounded-3 contentCard">
 						<!-- title page -->
 						<div class="">
 							<h4 class="mb-2 fw-bold fs-5">Network</h4>
 						</div>
 
-						<div class="row ms-1 gap-0">
+						<div class="row ms-1 gap-0 contentApps ">
 							<!-- content row 1 -->
-							<div class="row justify-content-between">
+							<div class="row justify-content-between gap-4">
 								<!-- card 1 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -1080,13 +1109,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">New Infra </h6>
+										<h6 class="mb-0 fw-medium textApps">New Infra </h6>
 									</div>
 
 								</div>
 								<!-- card 2 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -1101,13 +1130,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">Upgrade Capacity </h6>
+										<h6 class="mb-0 fw-medium textApps">Upgrade Capacity </h6>
 									</div>
 
 								</div>
 								<!-- card 3 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -1122,13 +1151,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">ODP Deployment </h6>
+										<h6 class="mb-0 fw-medium textApps">ODP Deployment </h6>
 									</div>
 
 								</div>
 								<!-- card 4 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -1143,13 +1172,13 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">All Site - DPG </h6>
+										<h6 class="mb-0 fw-medium textApps">All Site - DPG </h6>
 									</div>
 
 								</div>
 								<!-- card 5 -->
 								<div class="col-2 d-flex align-items-center bg-light rounded shadow position-relative"
-									style="height: 72px; padding-left: 24px; ">
+									style="height: 72px;  padding-left: 16px; ">
 
 									<!-- Aksen Merah Wave keluar area card -->
 									<div class="position-absolute"
@@ -1164,7 +1193,7 @@
 
 									<!-- Konten Text -->
 									<div class="ms-4">
-										<h6 class="mb-0 fw-medium fs-6">ODP Golive </h6>
+										<h6 class="mb-0 fw-medium textApps">ODP Golive </h6>
 									</div>
 
 								</div>
